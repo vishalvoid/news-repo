@@ -1,137 +1,66 @@
-Project Requirement – Worldwide News Aggregator
-1. Project Overview
-We want to create a Worldwide News Aggregator web application that collects and displays news from across the globe.
-The main goal is to have a visually stunning, eye-pleasing, and modern interface that is easy to use and attractive for viewers.
-No backend will be created for this project — instead, it will directly fetch news from free public news APIs and display them in a clean, well-structured layout.
+Build a production-ready, modern news aggregation website using Next.js, Tailwind CSS for styling, and Framer Motion for smooth animations.
 
-2. Purpose
-The purpose of this project is to provide users with a single platform to explore the latest headlines, news by country, and news by category, with an option to search specific topics — all in a beautiful, smooth, and engaging experience.
+Key Requirements:
 
-3. Core Features
-a. Homepage – Top Headlines
-Show the latest top headlines from around the world.
+News Aggregation:
 
-Each news item should appear in a card format with:
+Fetch and display news articles from multiple free news APIs around the world.
 
-Image (thumbnail)
+Implement server-side fetching for SEO-friendly content.
 
-Headline (title)
+Ensure API keys are handled securely via environment variables.
 
-Short summary/description
+Categorical Display:
 
-Source name
+Organize news articles into clear categories such as World, Politics, Technology, Sports, Entertainment, Business, Science, Health, Lifestyle, and Trending.
 
-Publish date & time
+Allow category-based navigation via a top navigation bar or sidebar.
 
-Button to read the full article (opens in a new tab)
+Modern UI/UX:
 
-b. Country Selection
-Dropdown or selection menu to choose a country (e.g., India, USA, UK, Japan, Australia, etc.).
+Fully responsive design for mobile, tablet, and desktop.
 
-Selecting a country updates the news feed instantly to show that country’s headlines.
+Clean, minimal, and visually appealing UI using Tailwind CSS.
 
-c. Category Selection
-Options for categories such as:
+Use Framer Motion for smooth page transitions, hover animations, and element fade-ins.
 
-General
+Features:
 
-Business
+Search bar to search across news articles.
 
-Sports
+Infinite scroll or pagination for loading more articles.
 
-Technology
+Dark mode toggle with state persistence.
 
-Entertainment
+Display article thumbnails, headlines, publication date, and source name.
 
-Health
+Clicking an article opens a dedicated article page with the full content and related articles.
 
-Science
+Performance & SEO:
 
-Clicking on a category shows relevant news in that category.
+Use Next.js Image optimization for thumbnails.
 
-d. Search Function
-A search bar to look for specific news topics.
+Pre-render and cache pages where possible.
 
-Search results should appear in the same card format as the homepage.
+Add proper meta tags, Open Graph tags, and structured data for SEO.
 
-e. Pagination or “Load More”
-Option to load more articles when reaching the bottom of the page or by clicking a button.
+Deployment Ready:
 
-4. User Experience & Layout Requirements
-Sidebar Navigation:
+Code should be clean, modular, and maintainable.
 
-A fixed or collapsible sidebar for easy navigation between categories, country selection, and other sections.
+Include .env.example for environment variables.
 
-Can also include quick links like “Top Headlines”, “My Country News”, “Latest Technology”, etc.
+Include a README.md with setup instructions.
 
-Header / Top Bar:
+Prepare it for deployment on Vercel.
 
-Contains logo/app name, search bar, and possibly a theme toggle (light/dark mode).
+Optional nice-to-have:
 
-Content Area:
+Show live breaking news ticker at the top.
 
-News displayed in cards/grid view with images, headlines, and summaries.
+Integrate a “Save to Reading List” feature with local storage.
 
-Cards have hover effects, shadows, and animations for a premium feel.
+Support multiple languages with i18n.
 
-Footer:
+Make sure the overall design feels like a modern, professional news site (similar to BBC, The Verge, or TechCrunch) but with unique branding.
 
-Minimal footer with app info or credits.
-
-Component-Based UI:
-
-Reusable visual components such as:
-
-News Card
-
-Search Bar
-
-Category Tabs
-
-Country Selector
-
-Pagination or Load More button
-
-Visual Enhancements:
-
-Subtle animations (fade-in, slide-in) when news loads.
-
-Consistent spacing and padding for a clean, breathable design.
-
-5. API Usage
-Fetch news directly from free news APIs.
-
-API key will be added directly in the project (since no backend is used).
-
-Data is fetched and displayed directly in the browser.
-
-6. Pages/Sections
-Home – Default top headlines with country and category filters.
-
-Search Results – Shows search-specific news results.
-
-(Optional) About/Info Page – A simple static page describing the app.
-
-7. Constraints
-No backend or database — client-side only.
-
-Must be built to run smoothly without complex setup.
-
-All focus should be on user interface, simplicity, and attractiveness.
-
-8. Future Possibilities (Not required now, but possible later)
-Dark mode toggle.
-
-Save/bookmark news for later.
-
-Multiple language support.
-
-If you hand this exact requirement to a developer, they’ll know you want:
-
-A purely client-side project.
-
-A very good-looking UI with a sidebar, multiple reusable components, and smooth design.
-
-Minimal complexity, but high visual appeal.
-
-If you want, I can now turn this into your Word report’s “Requirement Analysis” chapter so it’s ready for your submission without extra rewriting. That way, it will be 100% aligned with what the developer is building.
