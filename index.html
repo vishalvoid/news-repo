@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldNews - Global News Aggregator</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-globe"></i>
+                <span>WorldNews</span>
+            </div>
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search for news..." />
+                    <button id="searchBtn" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="header-controls">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <h3 class="nav-title">Categories</h3>
+                <ul class="nav-list" id="categoryList">
+                    <li class="nav-item active" data-category="">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Top Headlines</span>
+                    </li>
+                    <li class="nav-item" data-category="general">
+                        <i class="fas fa-globe"></i>
+                        <span>General</span>
+                    </li>
+                    <li class="nav-item" data-category="business">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Business</span>
+                    </li>
+                    <li class="nav-item" data-category="technology">
+                        <i class="fas fa-microchip"></i>
+                        <span>Technology</span>
+                    </li>
+                    <li class="nav-item" data-category="sports">
+                        <i class="fas fa-futbol"></i>
+                        <span>Sports</span>
+                    </li>
+                    <li class="nav-item" data-category="entertainment">
+                        <i class="fas fa-film"></i>
+                        <span>Entertainment</span>
+                    </li>
+                    <li class="nav-item" data-category="health">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Health</span>
+                    </li>
+                    <li class="nav-item" data-category="science">
+                        <i class="fas fa-flask"></i>
+                        <span>Science</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-section">
+                <h3 class="nav-title">Country</h3>
+                <div class="country-selector">
+                    <select id="countrySelect" class="country-select">
+                        <option value="">Global</option>
+                        <option value="us">United States</option>
+                        <option value="gb">United Kingdom</option>
+                        <option value="in">India</option>
+                        <option value="ca">Canada</option>
+                        <option value="au">Australia</option>
+                        <option value="jp">Japan</option>
+                        <option value="de">Germany</option>
+                        <option value="fr">France</option>
+                        <option value="it">Italy</option>
+                        <option value="br">Brazil</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-header">
+            <h1 id="pageTitle">Top Headlines</h1>
+            <div class="content-controls">
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div class="loading-spinner" id="loadingSpinner">
+            <div class="spinner"></div>
+            <p>Loading news...</p>
+        </div>
+
+        <!-- News Container -->
+        <div class="news-container" id="newsContainer">
+            <!-- News cards will be dynamically inserted here -->
+        </div>
+
+        <!-- Load More Button -->
+        <div class="load-more-container">
+            <button class="load-more-btn" id="loadMoreBtn">
+                <i class="fas fa-plus"></i>
+                Load More Articles
+            </button>
+        </div>
+
+        <!-- No Results Message -->
+        <div class="no-results" id="noResults" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h3>No articles found</h3>
+            <p>Try adjusting your search terms or select a different category.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 WorldNews. Powered by NewsAPI.</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">About</a>
+                <a href="#" class="footer-link">Privacy</a>
+                <a href="#" class="footer-link">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Scripts -->
+    <script src="scripts/api.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
